@@ -12,7 +12,7 @@
   grid-template-columns: 1fr;
   justify-items: center;
   align-items: center;
-  background: linear-gradient(to right, red, yellow);
+  background-image: linear-gradient(to right, green, red);
 }
 
 .container {
@@ -20,6 +20,10 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: white;
+  padding: 1em;
+  border-radius: 0.5em;
+  border: 1px solid black;
 }
 
 .input {
@@ -27,18 +31,46 @@
 }
 
 .title {
-  font: 600 3.5em 'Raleway', sans-serif;
-  color: rgba(0, 0, 0, 0.5);
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 0.5em;
-  width: 100%;
+}
+
+.sub-title {
+  text-align: center;
+  letter-spacing: 0.01em;
 }
 
 .gradient-info {
-  font: 900 1em 'Raleway', sans-serif;
-  color: rgba(0, 0, 0, 0.5);
+  font-size: 100%;
   text-align: center;
-  text-transform: none;
   letter-spacing: 0.01em;
+  margin: 1em 0;
+}
+
+.button {
+  padding: 0.5em;
+  border-radius: 0.5em;
+  border: 1px solid black;
+  font-weight: bold;
+  cursor: pointer;
+  background-image: linear-gradient(
+    to right,
+    hsla(120, 100%, 25%, 0.5),
+    hsla(0, 100%, 50%, 0.5)
+  );
+}
+
+@media (max-width: 430px) {
+  .title {
+    font-size: 1.4rem;
+  }
+
+  .sub-title {
+    font-size: 1.15rem;
+  }
+
+  .gradient-info {
+    font-size: 0.9rem;
+  }
 }
