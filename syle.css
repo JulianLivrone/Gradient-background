@@ -12,7 +12,7 @@
   grid-template-columns: 1fr;
   justify-items: center;
   align-items: center;
-  background-image: linear-gradient(to right, green, red);
+  background-image: linear-gradient(to bottom, green, red);
 }
 
 .container {
@@ -24,6 +24,18 @@
   padding: 1em;
   border-radius: 0.5em;
   border: 1px solid black;
+}
+
+.container-arrows {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.arrow {
+  width: 2rem;
+  height: 2rem;
 }
 
 .input {
@@ -41,7 +53,8 @@
   letter-spacing: 0.01em;
 }
 
-.gradient-info {
+.gradient-info,
+.gradient-direction {
   font-size: 100%;
   text-align: center;
   letter-spacing: 0.01em;
@@ -55,7 +68,7 @@
   font-weight: bold;
   cursor: pointer;
   background-image: linear-gradient(
-    to right,
+    to bottom,
     hsla(120, 100%, 25%, 0.5),
     hsla(0, 100%, 50%, 0.5)
   );
