@@ -46,10 +46,11 @@
 
 .input {
   margin: 1rem;
+  cursor: pointer;
 }
 
 .container-disable {
-  display: none;
+  visibility: hidden;
 }
 
 .title {
