@@ -11,7 +11,13 @@
     <main class="container">
       <h1 class="title">Background Generator</h1>
       <div>
-        <div>
+        <h3>Select number of colors:</h3>
+        <label for="html">2: </label><input class="input-colors-quantity2" type="radio" name="colors-quantity" />
+        <label for="html">3: </label><input class="input-colors-quantity3" type="radio" name="colors-quantity" />
+        <label for="html">4: </label><input class="input-colors-quantity4" type="radio" name="colors-quantity" checked/>
+      </div>
+      <div>
+        <div class="container-color1">
           <label for="color1"
             >Select color 1:
             <input
@@ -21,7 +27,7 @@
               value="#00ff00"
           /></label>
         </div>
-        <div>
+        <div class="container-color2">
           <label for="color2"
             >Select color 2:
             <input
@@ -29,6 +35,28 @@
               type="color"
               name="color2"
               value="#ff0000"
+          /></label>
+        </div>
+      </div>
+        <div class="container-color3">
+          <label for="color3"
+            >Select color 3:
+            <input
+              class="input input-color3"
+              type="color"
+              name="color3"
+              value="#0000ff"
+          /></label>
+        </div>
+      </div>
+        <div class="container-color4">
+          <label for="color4"
+            >Select color 4:
+            <input
+              class="input input-color4"
+              type="color"
+              name="color4"
+              value="#ffff00"
           /></label>
         </div>
       </div>

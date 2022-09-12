@@ -12,7 +12,13 @@
   grid-template-columns: 1fr;
   justify-items: center;
   align-items: center;
-  background-image: linear-gradient(to right, green, red);
+  background-image: linear-gradient(
+    to right,
+    #008000,
+    #ff0000,
+    #0000ff,
+    #ffff00
+  );
 }
 
 .container {
@@ -42,6 +48,10 @@
   margin: 1rem;
 }
 
+.container-disable {
+  display: none;
+}
+
 .title {
   text-align: center;
   text-transform: uppercase;
@@ -69,8 +79,10 @@
   cursor: pointer;
   background-image: linear-gradient(
     to right,
-    hsla(120, 100%, 25%, 0.5),
-    hsla(0, 100%, 50%, 0.5)
+    #008000,
+    #ff0000,
+    #0000ff,
+    #ffff00
   );
 }
 
