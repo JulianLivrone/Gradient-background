@@ -12,7 +12,7 @@
   grid-template-columns: 1fr;
   justify-items: center;
   align-items: center;
-  background-image: linear-gradient(to bottom, green, red);
+  background-image: linear-gradient(to right, green, red);
 }
 
 .container {
@@ -68,10 +68,14 @@
   font-weight: bold;
   cursor: pointer;
   background-image: linear-gradient(
-    to bottom,
+    to right,
     hsla(120, 100%, 25%, 0.5),
     hsla(0, 100%, 50%, 0.5)
   );
+}
+
+.arrow {
+  cursor: pointer;
 }
 
 @media (max-width: 430px) {

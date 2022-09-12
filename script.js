@@ -14,27 +14,47 @@ const setGradient = () => {
   body.style.background = `linear-gradient(${gradientDirection}, ${inputColor1.value}, ${inputColor2.value})`;
 
   button.style.background = `linear-gradient(${gradientDirection}, ${inputColor1.value}, ${inputColor2.value})`;
-
   h3Info.textContent = `${body.style.background};`;
   h3Direction.textContent = `Gradient Direction: ${gradientDirection}`;
 };
 
 const changeGradientDirection = (e) => {
-  switch (e.target.classList[1]) {
-    case 'top-arrow':
-      gradientDirection = 'to top';
-      break;
-    case 'left-arrow':
-      gradientDirection = 'to left';
-      break;
-    case 'bottom-arrow':
-      gradientDirection = 'to bottom';
-      break;
-    case 'right-arrow':
-      gradientDirection = 'to right';
-      break;
-    default:
-      gradientDirection = 'to right';
+  if (e.type === 'click') {
+    switch (e.target.classList[1]) {
+      case 'top-arrow':
+        gradientDirection = 'to top';
+        break;
+      case 'left-arrow':
+        gradientDirection = 'to left';
+        break;
+      case 'bottom-arrow':
+        gradientDirection = 'to bottom';
+        break;
+      case 'right-arrow':
+        gradientDirection = 'to right';
+        break;
+      default:
+        gradientDirection = 'to right';
+    }
+  } else if (e.type === 'keydown') {
+    switch (e.key) {
+      case 'ArrowTop':
+        gradientDirection = 'to top';
+        break;
+      case 'ArrowLeft':
+        gradientDirection = 'to left';
+        break;
+      case 'ArrowDown':
+        gradientDirection = 'to bottom';
+        break;
+      case 'ArrowRight':
+        gradientDirection = 'to right';
+        break;
+      default:
+        gradientDirection = 'to right';
+    }
+  } else {
+    console.log('wrong event');
   }
 
   setGradient();
@@ -54,6 +74,7 @@ inputColor1.addEventListener('input', setGradient);
 inputColor2.addEventListener('input', setGradient);
 
 window.addEventListener('load', setGradient);
+window.addEventListener('keydown', changeGradientDirection);
 
 button.addEventListener('click', generateRandomGradient);
 
