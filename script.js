@@ -63,8 +63,9 @@ const changeGradientDirection = (e) => {
         gradientDirection = 'to right';
     }
   } else if (e.type === 'keydown') {
+    console.log(e.type, e.key);
     switch (e.key) {
-      case 'ArrowTop':
+      case 'ArrowUp':
         gradientDirection = 'to top';
         break;
       case 'ArrowLeft':
