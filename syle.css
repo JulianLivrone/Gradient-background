@@ -12,6 +12,7 @@
   grid-template-columns: 1fr;
   justify-items: center;
   align-items: center;
+  font-family: 'Montserrat', sans-serif;
   background-image: linear-gradient(
     to right,
     #008000,
@@ -39,6 +40,13 @@
   align-items: center;
 }
 
+.container-colors-quantity {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .arrow {
   width: 2rem;
   height: 2rem;
@@ -47,6 +55,10 @@
 .input {
   margin: 1rem;
   cursor: pointer;
+}
+
+.label-input-colors-quantity3 {
+  margin: 0 1rem;
 }
 
 .container-disable {
