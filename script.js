@@ -16,9 +16,9 @@ const inputColorQuantity3 = document.querySelector('.input-colors-quantity3');
 const inputColorQuantity4 = document.querySelector('.input-colors-quantity4');
 const containerColor3 = document.querySelector('.container-color3');
 const containerColor4 = document.querySelector('.container-color4');
+const selectAngle = document.querySelector('#angle');
 
 const setGradient = () => {
-  console.log(containerColor3.classList.contains('container-disable'));
   if (
     containerColor3.classList.contains('container-disable') &&
     containerColor4.classList.contains('container-disable')
@@ -63,7 +63,6 @@ const changeGradientDirection = (e) => {
         gradientDirection = 'to right';
     }
   } else if (e.type === 'keydown') {
-    console.log(e.type, e.key);
     switch (e.key) {
       case 'ArrowUp':
         gradientDirection = 'to top';
@@ -79,6 +78,26 @@ const changeGradientDirection = (e) => {
         break;
       default:
         gradientDirection = 'to right';
+    }
+  } else if (e.type) {
+    switch (selectAngle.value) {
+      case '0deg':
+        gradientDirection = '0deg';
+        break;
+      case '45deg':
+        gradientDirection = '45deg';
+        break;
+      case '135deg':
+        gradientDirection = '135deg';
+        break;
+      case '225deg':
+        gradientDirection = '225deg';
+        break;
+      case '315deg':
+        gradientDirection = '315deg';
+        break;
+      default:
+        gradientDirection = '0deg';
     }
   } else {
     console.log('wrong event');
@@ -150,3 +169,5 @@ inputColorQuantity4.addEventListener('click', () => {
   containerColor4.classList.remove('container-disable');
   setGradient();
 });
+
+selectAngle.addEventListener('change', changeGradientDirection);
