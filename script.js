@@ -62,6 +62,7 @@ const changeGradientDirection = (e) => {
       default:
         gradientDirection = 'to right';
     }
+    selectAngle.value = '0deg';
   } else if (e.type === 'keydown') {
     switch (e.key) {
       case 'ArrowUp':
@@ -79,6 +80,7 @@ const changeGradientDirection = (e) => {
       default:
         gradientDirection = 'to right';
     }
+    selectAngle.value = '0deg';
   } else if (e.type) {
     switch (selectAngle.value) {
       case '0deg':
