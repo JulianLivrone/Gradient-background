@@ -14,22 +14,22 @@ let gradientDirection = 'to right';
 const inputColorQuantity2 = document.querySelector('.input-colors-quantity2');
 const inputColorQuantity3 = document.querySelector('.input-colors-quantity3');
 const inputColorQuantity4 = document.querySelector('.input-colors-quantity4');
-const containerColor3 = document.querySelector('.container-color3');
-const containerColor4 = document.querySelector('.container-color4');
+const labelInputColor3 = document.querySelector('.label-input-color3');
+const labelInputColor4 = document.querySelector('.label-input-color4');
 const selectAngle = document.querySelector('#angle');
 
 const setGradient = () => {
   if (
-    containerColor3.classList.contains('container-disable') &&
-    containerColor4.classList.contains('container-disable')
+    labelInputColor3.classList.contains('container-disable') &&
+    labelInputColor4.classList.contains('container-disable')
   ) {
     containerGradient.style.background = `linear-gradient(${gradientDirection}, ${inputColor1.value}, ${inputColor2.value})`;
     button.style.background = `linear-gradient(${gradientDirection}, ${inputColor1.value}, ${inputColor2.value})`;
 
     h3Info.textContent = `linear-gradient(${gradientDirection}, ${inputColor1.value}, ${inputColor2.value})`;
   } else if (
-    containerColor3.classList.contains('container-disable') ||
-    containerColor4.classList.contains('container-disable')
+    labelInputColor3.classList.contains('container-disable') ||
+    labelInputColor4.classList.contains('container-disable')
   ) {
     containerGradient.style.background = `linear-gradient(${gradientDirection}, ${inputColor1.value}, ${inputColor2.value}, ${inputColor3.value})`;
     button.style.background = `linear-gradient(${gradientDirection}, ${inputColor1.value}, ${inputColor2.value}, ${inputColor3.value})`;
@@ -110,16 +110,16 @@ const changeGradientDirection = (e) => {
 
 const generateRandomGradient = () => {
   if (
-    containerColor3.classList.contains('container-disable') &&
-    containerColor4.classList.contains('container-disable')
+    labelInputColor3.classList.contains('container-disable') &&
+    labelInputColor4.classList.contains('container-disable')
   ) {
     const randomColor1 = Math.floor(Math.random() * 16777215).toString(16);
     const randomColor2 = Math.floor(Math.random() * 16777215).toString(16);
     inputColor1.value = '#' + randomColor1;
     inputColor2.value = '#' + randomColor2;
   } else if (
-    containerColor3.classList.contains('container-disable') ||
-    containerColor4.classList.contains('container-disable')
+    labelInputColor3.classList.contains('container-disable') ||
+    labelInputColor4.classList.contains('container-disable')
   ) {
     const randomColor1 = Math.floor(Math.random() * 16777215).toString(16);
     const randomColor2 = Math.floor(Math.random() * 16777215).toString(16);
@@ -155,20 +155,20 @@ bottomArrow.addEventListener('click', changeGradientDirection);
 rightArrow.addEventListener('click', changeGradientDirection);
 
 inputColorQuantity2.addEventListener('click', () => {
-  containerColor3.classList.add('container-disable');
-  containerColor4.classList.add('container-disable');
+  labelInputColor3.classList.add('container-disable');
+  labelInputColor4.classList.add('container-disable');
   setGradient();
 });
 
 inputColorQuantity3.addEventListener('click', () => {
-  containerColor3.classList.remove('container-disable');
-  containerColor4.classList.add('container-disable');
+  labelInputColor3.classList.remove('container-disable');
+  labelInputColor4.classList.add('container-disable');
   setGradient();
 });
 
 inputColorQuantity4.addEventListener('click', () => {
-  containerColor3.classList.remove('container-disable');
-  containerColor4.classList.remove('container-disable');
+  labelInputColor3.classList.remove('container-disable');
+  labelInputColor4.classList.remove('container-disable');
   setGradient();
 });
 

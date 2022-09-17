@@ -15,101 +15,93 @@
   </head>
   <body>
     <main class="main">
-      <h1 class="title">Background Generator</h1>
-      <div class="content">
-        <div>
-          <div class="container-colors-quantity">
-            <h3>Select number of colors:</h3>
-            <div>
-              <label class="label-input-colors-quantity2" for="html"
-                >2:
-                <input
-                  class="input-colors-quantity2"
-                  type="radio"
-                  name="colors-quantity"
-              /></label>
-              <label class="label-input-colors-quantity3" for="html"
-                >3:
-                <input
-                  class="input-colors-quantity3"
-                  type="radio"
-                  name="colors-quantity"
-              /></label>
-              <label class="label-input-colors-quantity4" for="html"
-                >4:
-                <input
-                  class="input-colors-quantity4"
-                  type="radio"
-                  name="colors-quantity"
-                  checked
-              /></label>
-            </div>
-          </div>
-          <div class="container-color1">
-            <label for="color1"
-              >Select color 1:
-              <input
-                class="input input-color1"
-                type="color"
-                name="color1"
-                value="#00ff00"
-            /></label>
-            <div class="container-color2">
-              <label for="color2"
-                >Select color 2:
-                <input
-                  class="input input-color2"
-                  type="color"
-                  name="color2"
-                  value="#ff0000"
-              /></label>
-            </div>
-          </div>
-          <div class="container-color3">
-            <label for="color3"
-              >Select color 3:
-              <input
-                class="input input-color3"
-                type="color"
-                name="color3"
-                value="#0000ff"
-            /></label>
-          </div>
-          <div class="container-color4">
-            <label for="color4"
-              >Select color 4:
-              <input
-                class="input input-color4"
-                type="color"
-                name="color4"
-                value="#ffff00"
-            /></label>
+      <div class="container-title">
+        <h1 class="title">Background Generator</h1>
+      </div>
+      <div class="container-colors-quantity">
+        <h3 class="sub-title">Select number of colors:</h3>
+        <div class="container-radio-buttons">
+          <label class="label-input-colors-quantity2" for="html"
+            >2:
+            <input
+              class="input-colors-quantity2"
+              type="radio"
+              name="colors-quantity"
+          /></label>
+          <label class="label-input-colors-quantity3" for="html"
+            >3:
+            <input
+              class="input-colors-quantity3"
+              type="radio"
+              name="colors-quantity"
+          /></label>
+          <label class="label-input-colors-quantity4" for="html"
+            >4:
+            <input
+              class="input-colors-quantity4"
+              type="radio"
+              name="colors-quantity"
+              checked
+          /></label>
+        </div>
+        <div class="container-colors">
+          <label class="label-input-color1" for="color1"
+            >Select color 1:
+            <input
+              class="input input-color1"
+              type="color"
+              name="color1"
+              value="#00ff00"
+          /></label>
+          <label class="label-input-color2" for="color2"
+            >Select color 2:
+            <input
+              class="input input-color2"
+              type="color"
+              name="color2"
+              value="#ff0000"
+          /></label>
+          <label class="label-input-color3" for="color3"
+            >Select color 3:
+            <input
+              class="input input-color3"
+              type="color"
+              name="color3"
+              value="#0000ff"
+          /></label>
+          <label class="label-input-color4" for="color4"
+            >Select color 4:
+            <input
+              class="input input-color4"
+              type="color"
+              name="color4"
+              value="#ffff00"
+          /></label>
+        </div>
+      </div>
+      <div class="container-gradient-info">
+        <h2 class="sub-title">Current CSS Background:</h2>
+        <h3 class="gradient-info"></h3>
+        <button class="button">Generate random linear gradient</button>
+      </div>
+      <div class="container-gradient-direction">
+        <h3 class="gradient-direction">Gradient direction:</h3>
+        <div class="container-arrows">
+          <button class="arrow top-arrow">&uarr;</button>
+          <div>
+            <button class="arrow left-arrow">&larr;</button>
+            <button class="arrow bottom-arrow">&darr;</button>
+            <button class="arrow right-arrow">&rarr;</button>
           </div>
         </div>
-        <div class="container-gradient-info">
-          <h2 class="sub-title">Current CSS Background:</h2>
-          <h3 class="gradient-info"></h3>
-          <button class="button">Generate random linear gradient</button>
-        </div>
-        <div>
-          <h3 class="gradient-direction">Gradient direction:</h3>
-          <div class="container-arrows">
-            <button class="arrow top-arrow">&uarr;</button>
-            <div>
-              <button class="arrow left-arrow">&larr;</button>
-              <button class="arrow bottom-arrow">&darr;</button>
-              <button class="arrow right-arrow">&rarr;</button>
-            </div>
-          </div>
-          <label for="angle">Choose an angle:</label>
-          <select class="select" id="angle" name="angle">
-            <option value="0deg">0deg</option>
-            <option value="45deg">45deg</option>
-            <option value="135deg">135deg</option>
-            <option value="225deg">225deg</option>
-            <option value="315deg">315deg</option>
-          </select>
-        </div>
+        <label for="angle">Choose an angle:</label>
+        <select class="select" id="angle" name="angle">
+          <option value="0deg">0deg</option>
+          <option value="45deg">45deg</option>
+          <option value="135deg">135deg</option>
+          <option value="225deg">225deg</option>
+          <option value="315deg">315deg</option>
+        </select>
       </div>
       <div class="container-gradient"></div>
     </main>
