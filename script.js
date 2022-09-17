@@ -4,7 +4,7 @@ const inputColor1 = document.querySelector('.input-color1');
 const inputColor2 = document.querySelector('.input-color2');
 const inputColor3 = document.querySelector('.input-color3');
 const inputColor4 = document.querySelector('.input-color4');
-const body = document.querySelector('#body');
+const containerGradient = document.querySelector('.container-gradient');
 const button = document.querySelector('.button');
 const topArrow = document.querySelector('.top-arrow');
 const leftArrow = document.querySelector('.left-arrow');
@@ -23,7 +23,7 @@ const setGradient = () => {
     containerColor3.classList.contains('container-disable') &&
     containerColor4.classList.contains('container-disable')
   ) {
-    body.style.background = `linear-gradient(${gradientDirection}, ${inputColor1.value}, ${inputColor2.value})`;
+    containerGradient.style.background = `linear-gradient(${gradientDirection}, ${inputColor1.value}, ${inputColor2.value})`;
     button.style.background = `linear-gradient(${gradientDirection}, ${inputColor1.value}, ${inputColor2.value})`;
 
     h3Info.textContent = `linear-gradient(${gradientDirection}, ${inputColor1.value}, ${inputColor2.value})`;
@@ -31,12 +31,12 @@ const setGradient = () => {
     containerColor3.classList.contains('container-disable') ||
     containerColor4.classList.contains('container-disable')
   ) {
-    body.style.background = `linear-gradient(${gradientDirection}, ${inputColor1.value}, ${inputColor2.value}, ${inputColor3.value})`;
+    containerGradient.style.background = `linear-gradient(${gradientDirection}, ${inputColor1.value}, ${inputColor2.value}, ${inputColor3.value})`;
     button.style.background = `linear-gradient(${gradientDirection}, ${inputColor1.value}, ${inputColor2.value}, ${inputColor3.value})`;
 
     h3Info.textContent = `linear-gradient(${gradientDirection}, ${inputColor1.value}, ${inputColor2.value}, ${inputColor3.value})`;
   } else {
-    body.style.background = `linear-gradient(${gradientDirection}, ${inputColor1.value}, ${inputColor2.value}, ${inputColor3.value}, ${inputColor4.value})`;
+    containerGradient.style.background = `linear-gradient(${gradientDirection}, ${inputColor1.value}, ${inputColor2.value}, ${inputColor3.value}, ${inputColor4.value})`;
     button.style.background = `linear-gradient(${gradientDirection}, ${inputColor1.value}, ${inputColor2.value}, ${inputColor3.value}, ${inputColor4.value})`;
 
     h3Info.textContent = `linear-gradient(${gradientDirection}, ${inputColor1.value}, ${inputColor2.value}, ${inputColor3.value}, ${inputColor4.value})`;
